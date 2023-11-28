@@ -32,10 +32,10 @@ public class MainFrame extends JFrame{
         this.jenisMemberDao = new JenisMemberDao();
         this.memberDao = new MemberDao();
         
-        this.jenisMemberFrame = new JenisMemberFram(jenisMemberDao);
+        this.jenisMemberFrame = new JenisMemberFrame(jenisMemberDao);
         this.memberFrame = new MemberFrame(memberDao, jenisMemberDao);
         
-        this.setLayout(new Flowlayout());
+        this.setLayout(new FlowLayout());
         MainButtonActionListener actionListener = new MainButtonActionListener(this);
         this.buttonJenisMember = new JButton("Jenis Member");
         this.buttonMember = new JButton("Member");

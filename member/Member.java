@@ -14,23 +14,23 @@ public class Member {
     public String nama;
     private JenisMember jenisMember;
     
-    public void setId(String id){
+    public void setId(String id) {
         this.id = id;
     }
     
-    public String getId(){
+    public String getId() {
         return id;
     }
     
-    public void setNama(String nama){
+    public void setNama(String nama) {
         this.nama = nama;
     }
     
-    public String getNama(){
+    public String getNama() {
         return nama;
     }
     
-    public void setJenisMember(JenisMember jenisMember){
+    public void setJenisMember(JenisMember jenisMember) {
         this.jenisMember = jenisMember;
     }
     

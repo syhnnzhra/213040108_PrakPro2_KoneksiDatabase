@@ -15,12 +15,12 @@ import dao.MemberDao;
 public class MemberButtonSimpanActionListener implements ActionListener {
     private MemberFrame memberFrame;
     private MemberDao memberDao;
-    
-    private MemberButtonSimpanActionListener(MemberFrame memberFrame, MemberDao memberDao){
+
+    MemberButtonSimpanActionListener(MemberFrame memberFrame, MemberDao memberDao){
         this.memberFrame = memberFrame;
         this.memberDao = memberDao;
     }
-    
+
     public void actionPerformed(ActionEvent e){
         String nama = this.memberFrame.getNama();
         if(nama.isEmpty()){
@@ -32,7 +32,7 @@ public class MemberButtonSimpanActionListener implements ActionListener {
             member.setId(UUID.randomUUID().toString());
             member.setNama(nama);
             member.setJenisMember(jenisMember);
-            
+
             this.memberFrame.addMember(member);
             this.memberDao.insert(member);
         }

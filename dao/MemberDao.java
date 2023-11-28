@@ -69,8 +69,7 @@ public class MemberDao {
         
         try(Connection connection = MySqlConnection.getInstance().getConnection();
             Statement statement = connection.createStatement(); ) {
-            try(ResultSet resultSet = statement.executeQuery("select member.id, member.nama, jenis_member_id, jenis_member.nama" +
-                    "jenis_member_nama from member join jenis_member on jenis_member.id = member.jenis_member_id");){
+            try(ResultSet resultSet = statement.executeQuery("select member.id, member.nama, jenis_member.id jenis_member_id, jenis_member.nama jenis_member_nama from member join jenis_member on jenis_member.id = member.jenis_member_id ");){
                 while(resultSet.next()){
                     Member member = new Member();
                     member.setId(resultSet.getString("id"));

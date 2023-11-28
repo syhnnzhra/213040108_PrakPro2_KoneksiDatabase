@@ -53,7 +53,7 @@ public class MemberFrame extends JFrame{
         tableModel = new MemberTableModel(memberList);
         table.setModel(tableModel);
         
-        JenisMemberButtonSimpanActionListener actionListener = new JenisMemberButtonSimpanActionListener(this, memberDao);
+        MemberButtonSimpanActionListener actionListener = new MemberButtonSimpanActionListener(this, memberDao);
         
         button.addActionListener(actionListener);
         
